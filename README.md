@@ -19,20 +19,22 @@ The platform combines SQL generation, forecasting, Retrieval-Augmented Generatio
 - Interactive Business Dashboard
 - Natural Language Interface
 
+
 ## Multi-Agent Architecture
-                 User
-                   │
-                   ▼
-        Coordinator Agent
-                   │
- ┌─────────┬─────────┬──────────┬──────────┐
- ▼         ▼         ▼          ▼
-SQL     Forecast    RAG     Decision
-Agent     Agent    Agent      Agent
- │          │         │          │
- └──────────┴─────────┴──────────┘
-                   │
-          Streamlit Dashboard
+
+User Question
+↓
+Coordinator Agent
+↓
+├── SQL Agent
+
+├── Forecast Agent
+
+├── RAG Agent
+
+└── Decision Agent
+↓
+Streamlit Dashboard
 
 
 ## Features 
@@ -126,20 +128,27 @@ Agent     Agent    Agent      Agent
 ---
  ## Work flow
 
-User Question
-      │
-      ▼
-Coordinator Agent
-      │
- ┌────┼────┐
- ▼    ▼    ▼
-SQL Forecast RAG
-      │
-      ▼
-Decision Agent
-      │
-      ▼
-Interactive Dashboard
+                    👤 User
+                        │
+                        ▼
+            💬 Natural Language Query
+                        │
+                        ▼
+              🤖 Coordinator Agent
+    ┌──────────┬──────────┬──────────┬──────────┐
+        ▼          ▼          ▼          ▼
+   🗄 SQL      📈 Forecast   📚 RAG    🎯 Decision
+    Agent        Agent        Agent      Agent
+        │          │           │
+        ▼          ▼           ▼
+     MySQL     Sales Data   ChromaDB
+                              + PDF
+            └───────────┬──────────────┘
+                        ▼
+              📊 Streamlit Dashboard
+                        │
+                        ▼
+          📈 Charts • Reports • Recommendations
 
 ## Installation
 
