@@ -162,15 +162,22 @@ Thapar Institute of Engineering & Technology
 ### SQL Agent
 
 ![SQL Dashboard](screenshots/sql_dashboard.png)
+![SQL Dashboard](screenshots/sql_dashboard2.png)
 
 ### Forecast Agent
 
 ![Forecast Dashboard](screenshots/forecast_dashboard.png)
+![Forecast Dashboard](screenshots/forecast_dashboard2.png)
+
 
 ### RAG Agent
 
 ![RAG Dashboard](screenshots/rag_dashboard.png)
 
+
+
 ### Decision Agent
 
 ![Decision Dashboard](screenshots/decision_dashboard.png)
+![Decision Dashboard](screenshots/decision_dashboard2
+.png)
