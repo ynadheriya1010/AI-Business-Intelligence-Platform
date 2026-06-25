@@ -24,7 +24,9 @@ The platform combines SQL generation, forecasting, Retrieval-Augmented Generatio
 
 User Question
 ↓
+
 Coordinator Agent
+
 ↓
 ├── SQL Agent
 
@@ -33,6 +35,7 @@ Coordinator Agent
 ├── RAG Agent
 
 └── Decision Agent
+
 ↓
 Streamlit Dashboard
 
@@ -140,14 +143,17 @@ Streamlit Dashboard
    🗄 SQL      📈 Forecast   📚 RAG    🎯 Decision
     Agent        Agent        Agent      Agent
         │          │           │
+        
         ▼          ▼           ▼
      MySQL     Sales Data   ChromaDB
                               + PDF
             └───────────┬──────────────┘
                         ▼
+
               📊 Streamlit Dashboard
                         │
                         ▼
+                        
           📈 Charts • Reports • Recommendations
 
 ## Installation
