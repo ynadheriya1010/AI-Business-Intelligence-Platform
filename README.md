@@ -8,7 +8,34 @@ The platform combines SQL generation, forecasting, Retrieval-Augmented Generatio
 
 ---
 
-## Features
+## 🎯 Project Highlights
+
+- Multi-Agent AI System
+- Local LLM Deployment (Privacy Preserving)
+- Enterprise Business Analytics
+- Retrieval-Augmented Generation (RAG)
+- Time-Series Forecasting
+- Executive Decision Support
+- Interactive Business Dashboard
+- Natural Language Interface
+
+## Multi-Agent Architecture
+                 User
+                   │
+                   ▼
+        Coordinator Agent
+                   │
+ ┌─────────┬─────────┬──────────┬──────────┐
+ ▼         ▼         ▼          ▼
+SQL     Forecast    RAG     Decision
+Agent     Agent    Agent      Agent
+ │          │         │          │
+ └──────────┴─────────┴──────────┘
+                   │
+          Streamlit Dashboard
+
+
+## Features 
 
 ### SQL Agent
 
@@ -44,44 +71,30 @@ The platform combines SQL generation, forecasting, Retrieval-Augmented Generatio
 
 ---
 
-## Architecture
+## 🛠 Tech Stack
 
-User Question
+### Languages
+- Python
 
-↓
+### Frameworks
+- Streamlit
+- LangChain
+- Prophet
 
-Coordinator Agent
+### Database
+- MySQL
+- ChromaDB
 
-↓
+### AI Models
+- Ollama
+- Qwen 2.5
 
-├── SQL Agent
+### Visualization
+- Plotly
+- Pandas
 
-├── Forecast Agent
-
-├── RAG Agent
-
-└── Decision Agent
-
-↓
-
-Streamlit Dashboard
-
----
-
-## Tech Stack
-
-* Python
-* Streamlit
-* Ollama
-* Qwen 2.5
-* MySQL
-* Pandas
-* Plotly
-* Prophet
-* ChromaDB
-* LangChain
-* HuggingFace Embeddings
-
+### Embeddings
+- HuggingFace Sentence Transformers
 ---
 
 ## Example Questions
@@ -111,6 +124,22 @@ Streamlit Dashboard
 * Should we focus on Technology products?
 
 ---
+ ## Work flow
+
+User Question
+      │
+      ▼
+Coordinator Agent
+      │
+ ┌────┼────┐
+ ▼    ▼    ▼
+SQL Forecast RAG
+      │
+      ▼
+Decision Agent
+      │
+      ▼
+Interactive Dashboard
 
 ## Installation
 
@@ -148,15 +177,6 @@ streamlit run app.py
 
 ---
 
-## Author
-
-Yash Nadheriya
-
-Electronics and Instrumentation Engineering
-
-Thapar Institute of Engineering & Technology
-"# AI-Business-Intelligence-Platform" 
-
 ## Screenshots
 
 ### SQL Agent
@@ -180,5 +200,15 @@ Thapar Institute of Engineering & Technology
 
 ![Decision Dashboard](screenshots/decision_dashboard.png)
 ![Decision Dashboard](screenshots/decision_dashboard2.png)
+
+## Author
+
+Yash Nadheriya
+
+Electronics and Instrumentation Engineering
+
+Thapar Institute of Engineering & Technology
+"# AI-Business-Intelligence-Platform" 
+
 
 
