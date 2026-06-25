@@ -129,29 +129,11 @@ Streamlit Dashboard
 * Should we focus on Technology products?
 
 ---
- ## Work flow
+ ## Work flow 
 
-                    👤 User
-                        │
-                        ▼
-            💬 Natural Language Query
-                        │
-                        ▼
-              🤖 Coordinator Agent
-    ┌──────────┬──────────┬──────────┬──────────┐
-    ▼          ▼          ▼          ▼
-   🗄 SQL      📈Forecast   📚  RAG    🎯 Decision
-    Agent         Agent         Agent      Agent
-      │            │              │
-      ▼            ▼              ▼
-     MySQL     Sales Data   ChromaDB
-                              + PDF
-            └───────────┬──────────────┘
-                        ▼
-              📊 Streamlit Dashboard
-                        │
-                        ▼
-          📈 Charts • Reports • Recommendations
+ ## 🔄 Workflow
+
+**User Query** → **Coordinator Agent** → **SQL / Forecast / RAG / Decision Agent** → **Business Insights** → **Interactive Streamlit Dashboard**
 
 ## Installation
 
