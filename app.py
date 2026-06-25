@@ -7,6 +7,10 @@ from analytics_agent import generate_insights
 from forecast_agent import forecast_agent
 from rag_agent import rag_query
 from decision_agent import generate_decision
+from dotenv import load_dotenv
+import os
+
+
 
 # =====================================
 # Enhanced Page Config

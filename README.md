@@ -179,5 +179,6 @@ Thapar Institute of Engineering & Technology
 ### Decision Agent
 
 ![Decision Dashboard](screenshots/decision_dashboard.png)
-![Decision Dashboard](screenshots/decision_dashboard2
-.png)
+![Decision Dashboard](screenshots/decision_dashboard2.png)
+
+
