@@ -156,3 +156,21 @@ Electronics and Instrumentation Engineering
 
 Thapar Institute of Engineering & Technology
 "# AI-Business-Intelligence-Platform" 
+
+## Screenshots
+
+### SQL Agent
+
+![SQL Dashboard](screenshots/sql_dashboard.png)
+
+### Forecast Agent
+
+![Forecast Dashboard](screenshots/forecast_dashboard.png)
+
+### RAG Agent
+
+![RAG Dashboard](screenshots/rag_dashboard.png)
+
+### Decision Agent
+
+![Decision Dashboard](screenshots/decision_dashboard.png)

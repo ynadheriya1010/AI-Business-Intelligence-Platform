@@ -8,12 +8,6 @@ import mysql.connector
 # Load API Key
 # ==========================
 
-load_dotenv()
-
-genai.configure(
-    api_key=os.getenv("GEMINI_API_KEY")
-)
-
 model = genai.GenerativeModel(
     "gemini-2.5-flash"
 )
@@ -22,10 +16,14 @@ model = genai.GenerativeModel(
 # Database Connection
 # ==========================
 
+from dotenv import load_dotenv
+import os
+
+
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Your password",
+    password= "YN@789",
     database="business_ai"
 )
 

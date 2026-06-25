@@ -54,7 +54,12 @@ with st.sidebar:
     st.subheader("⚙️ Settings")
     show_sql = st.checkbox("Show SQL Queries", value=True)
     auto_chart = st.checkbox("Auto-generate Charts", value=True)
-    max_rows = st.slider("Max Rows Display", 10, 500, 100)
+    max_rows = st.slider(
+    "Max Rows Display",
+    min_value=0,
+    max_value=500,
+    value=100
+)
     
     st.markdown("---")
     

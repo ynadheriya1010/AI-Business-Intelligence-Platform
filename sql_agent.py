@@ -1,6 +1,8 @@
 from ollama import chat
 import mysql.connector
 import pandas as pd
+from dotenv import load_dotenv
+import os
 
 
 def generate_sql(question):
@@ -88,7 +90,7 @@ def run_sql(question):
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="YOUR PASSWORD",
+        password= "YN@789",
         database="business_ai"
     )
 

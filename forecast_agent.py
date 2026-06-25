@@ -1,6 +1,9 @@
 import pandas as pd
 import mysql.connector
 from prophet import Prophet
+from dotenv import load_dotenv
+import os
+
 
 
 def forecast_agent(question):
@@ -44,11 +47,11 @@ def forecast_agent(question):
     # ==========================
 
     conn = mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="YOUR PASSWORD",
-        database="business_ai"
-    )
+    host="localhost",
+    user="root",
+    password="YN@789",
+    database="business_ai"
+)
 
     query = f"""
     SELECT

@@ -1,10 +1,14 @@
 import pandas as pd
 import mysql.connector
+from dotenv import load_dotenv
+import os
+
+
 
 conn = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="YOUR PASSWORD",
+    password="YN@789",
     database="business_ai"
 )
 
