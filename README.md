@@ -139,12 +139,12 @@ Streamlit Dashboard
                         ▼
               🤖 Coordinator Agent
     ┌──────────┬──────────┬──────────┬──────────┐
-        ▼          ▼          ▼          ▼
+    ▼          ▼          ▼          ▼
    🗄 SQL      📈 Forecast   📚 RAG    🎯 Decision
     Agent        Agent        Agent      Agent
         │          │           │
-        
         ▼          ▼           ▼
+        
      MySQL     Sales Data   ChromaDB
                               + PDF
             └───────────┬──────────────┘
