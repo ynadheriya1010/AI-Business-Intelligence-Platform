@@ -140,20 +140,17 @@ Streamlit Dashboard
               🤖 Coordinator Agent
     ┌──────────┬──────────┬──────────┬──────────┐
     ▼          ▼          ▼          ▼
-   🗄 SQL      📈 Forecast   📚 RAG    🎯 Decision
-    Agent        Agent        Agent      Agent
-        │          │           │
-        ▼          ▼           ▼
-        
+   🗄 SQL      📈Forecast   📚  RAG    🎯 Decision
+    Agent         Agent         Agent      Agent
+      │            │              │
+      ▼            ▼              ▼
      MySQL     Sales Data   ChromaDB
                               + PDF
             └───────────┬──────────────┘
                         ▼
-
               📊 Streamlit Dashboard
                         │
                         ▼
-                        
           📈 Charts • Reports • Recommendations
 
 ## Installation
