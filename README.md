@@ -139,7 +139,7 @@ Streamlit Dashboard
 
 ### Clone Repository
 
-git clone https://github.com/yourusername/AI-Business-Intelligence-Platform.git
+git clone https://github.com/ynadheriya1010/AI-Business-Intelligence-Platform.git
 
 cd AI-Business-Intelligence-Platform
 
