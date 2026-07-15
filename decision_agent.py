@@ -1,17 +1,19 @@
-from ollama import chat
+from groq import Groq
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 
-def generate_decision(
-    question,
-    sql_result="",
-    forecast_result="",
-    rag_result=""
-):
+client = Groq(
+    api_key=os.getenv("GROQ_API_KEY")
+)
+
+def generate_decision(question, sql_result, forecast_result, rag_result):
 
     prompt = f"""
-You are a Senior Business Consultant.
+You are a Senior Business Decision Consultant.
 
-Business Question:
+User Question:
 {question}
 
 SQL Analysis:
@@ -20,27 +22,27 @@ SQL Analysis:
 Forecast Analysis:
 {forecast_result}
 
-Document Analysis:
+RAG Knowledge:
 {rag_result}
 
 Provide:
 
-1. Recommendation
-2. Supporting Reasons
-3. Potential Risks
-4. Next Action
+1. Final Business Decision
+2. Reason
+3. Recommended Action
 
-Keep the answer concise.
+Keep response concise.
 """
 
-    response = chat(
-        model="qwen2.5:7b",
+    response = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
         messages=[
             {
                 "role": "user",
                 "content": prompt
             }
-        ]
+        ],
+        temperature=0.3
     )
 
-    return response["message"]["content"]
+    return response.choices[0].message.content

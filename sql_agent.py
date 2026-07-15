@@ -1,8 +1,15 @@
-from ollama import chat
 import mysql.connector
 import pandas as pd
+from groq import Groq
 from dotenv import load_dotenv
 import os
+
+
+load_dotenv()
+
+client = Groq(
+    api_key=os.getenv("GROQ_API_KEY")
+)
 
 
 def generate_sql(question):
@@ -60,8 +67,8 @@ Rules:
 5. Always use backticks around column names that contain spaces
 """
 
-    response = chat(
-        model="qwen2.5:7b",
+    response = client.chat.completions.create(
+        model="llama-3.3-70b-versatile",
         messages=[
             {
                 "role": "user",
@@ -70,7 +77,13 @@ Rules:
         ]
     )
 
-    sql = response["message"]["content"]
+    # Defensive extraction in case the SDK/object shape is ever non-standard
+    try:
+        sql = response.choices[0].message.content
+    except TypeError:
+        # Fallback: .choices came back as a single object instead of a list
+        choice = response.choices
+        sql = choice.message.content
 
     # Clean LLM response
     sql = sql.replace("```sql", "")
@@ -87,14 +100,13 @@ def run_sql(question):
     print("\nGenerated SQL:")
     print(sql_query)
 
-    load_dotenv()
-    
     conn = mysql.connector.connect(
-    host=os.getenv("DB_HOST"),
-    user=os.getenv("DB_USER"),
-    password=os.getenv("DB_PASSWORD"),
-    database=os.getenv("DB_NAME")
-)
+        host=os.getenv("DB_HOST"),
+        port=int(os.getenv("DB_PORT")),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        database=os.getenv("DB_NAME")
+    )
 
 
     try:
